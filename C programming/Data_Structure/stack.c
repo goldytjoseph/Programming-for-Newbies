@@ -61,7 +61,7 @@ void push() // Function to do PUSH to the stack.
         s.top = s.top + 1;
         s.stk[s.top] = num;
     }
-    return;
+
 }
 
 
@@ -88,7 +88,6 @@ void display() // Function to display stack.
     if (s.top == -1)
     {
         printf("Empty!, Push something to the stack to view.\n");
-        return;
     }
     else
     {
