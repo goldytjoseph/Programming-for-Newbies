@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-#define TRADN_VIEW 1
-
+#define TRADN_VIEW 1	/* Change the stack view perspective */
 #define MAX    10
 
 void push();
@@ -41,8 +40,8 @@ int peek() {
 }
 
 #ifndef TRADN_VIEW 
-/*	If not traditional view enabled display the stack in linearly
-	the top  of the stack is at least significant position. */ 
+/* If not traditional view enabled display the stack in linearly
+   the top  of the stack is at least significant position. */ 
 void display() {
     int i;
     for (i = 0; i <= top; i++) {
@@ -50,8 +49,8 @@ void display() {
     }
 }
 #else
-/*  Display the stack in linearly the top  of the 
-	stack is at most significant position. */
+/* Display the stack in linearly the top  of the stack is 
+   at most significant position. */
 void display() {
     int i;
     for (i = top; i >= 0; i--) {
@@ -61,7 +60,6 @@ void display() {
 #endif
 
 int main() {
-
     int option;
     
     do {
@@ -71,7 +69,6 @@ int main() {
         printf("3. PEEK\n");
         printf("4. DISPLAY\n");
         printf("5. EXIT\n");
-    	
     	printf("select one operation: ");
     	scanf("%d", &option);
 
