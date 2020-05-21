@@ -41,17 +41,17 @@ int peek() {
 }
 
 #ifndef TRADN_VIEW 
-// Display the whole stack linear
+/*	If not traditional view enabled display the stack in linearly
+	the top  of the stack is at least significant position. */ 
 void display() {
     int i;
     for (i = 0; i <= top; i++) {
     	printf("%d, ", STACK[i]);
     }
 }
-
-#else 
-
-// Display the whole stack linear
+#else
+/*  Display the stack in linearly the top  of the 
+	stack is at most significant position. */
 void display() {
     int i;
     for (i = top; i >= 0; i--) {
