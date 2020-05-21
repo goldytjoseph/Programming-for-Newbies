@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define TRADN_VIEW 1
+
 #define MAX    10
 
 void push();
@@ -38,6 +40,7 @@ int peek() {
     return top;
 }
 
+#ifndef TRADN_VIEW 
 // Display the whole stack linear
 void display() {
     int i;
@@ -45,6 +48,17 @@ void display() {
     	printf("%d, ", STACK[i]);
     }
 }
+
+#else 
+
+// Display the whole stack linear
+void display() {
+    int i;
+    for (i = top; i >= 0; i--) {
+    	printf("%d, ", STACK[i]);
+    }
+}
+#endif
 
 int main() {
 
