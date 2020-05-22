@@ -39,7 +39,7 @@ int peek() {
     return top;
 }
 
-#ifndef TRADN_VIEW 
+#if TRADN_VIEW 
 /* If not traditional view enabled display the stack in linearly
    the top  of the stack is at least significant position. */ 
 void display() {
