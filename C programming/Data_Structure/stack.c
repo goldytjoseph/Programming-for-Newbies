@@ -1,3 +1,5 @@
+/* Simple Stack using struct */
+
 #include <stdio.h>
 
 #define MAX 10
@@ -13,8 +15,7 @@ void push (void);
 int  pop(void);
 void display (void);
 
-// Function to do PUSH to the stack
-void push() {
+void push() { /* Function to do PUSH to the stack */
 	int num;
     if(ptr->top == (MAX - 1)) {
         printf("Stack seems to be full, Overflow detected!\n");
@@ -26,8 +27,7 @@ void push() {
     }
 }
 
-// Function to do POP from the stack
-int pop() {
+int pop() { /* Function to do POP from the stack */
 
     int num;
     if(ptr->top == -1) {
@@ -41,8 +41,7 @@ int pop() {
     return(num);
 }
 
-// Function to display stack
-void display() { 
+void display() { /* Function to display stack */
 
     int i;
     if (ptr->top == -1) {
