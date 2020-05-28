@@ -17,22 +17,25 @@ int main()
     const char num[][6] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
     if(a != 0 && b != 0){	    
 	for (int i = a; i <= b; i++){
-		if (i <= 9){
-			printf("%s\n", num[i-1]);
-		}
-		else{
-			printf("%s\n", oddoreven(i));
-		}
+		(i <= 9)?printf("%s\n", num[i-1]):printf("%s\n", oddoreven(i));
 	}
-    }
     return 0;
+    }
 }
 
 char* oddoreven(int i){
-	if (i%2==0){
-		return "even";
-	}
-	else{
-		return "odd";
-	}
+	return (i%2==0)?"even":"odd"; /* you can't use return inside a ternary operator
+				       * but you can use like this.
+				       *
+				       * The ternary operator deals in expressions, but return is a statement.
+				       * 
+                                       * The syntax of the return statement is, return expr ;
+				       * 
+				       * The syntax of the ternary conditional operator is
+				       * 
+                                       * expr1 ? expr2 : expr3
+				       * 
+				       * So you can plug in an invocation of the ternary operator as the expr in a return statement.
+                                       * But you cannot plug in a return statement as expr2 or expr3 of a ternary operator.
+				       */
 }
